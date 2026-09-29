@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Мониторинга Глобальных Рисков</title>
+    <!-- Использование системных шрифтов исключает утечку IP в Google Fonts -->
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --success: #10b981;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        h1 { font-size: 1.5rem; font-weight: 700; color: #38bdf8; }
+
+        .privacy-badge {
+            background: #0284c7;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .source { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        .score {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .score.danger { background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+        .score.warning { background: rgba(245, 158, 11, 0.2); color: var(--warning); border: 1px solid var(--warning); }
+        .score.success { background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid var(--success); }
+
+        .title { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+        .analysis { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>🛡️ SITUATION CENTER</h1>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Мониторинг безопасности и деэскалации рисков</p>
+            </div>
+            <div class="privacy-badge">🔒 ZERO-DATA / NO LOGS</div>
+        </header>
+
+        <div class="grid">
+
+            <div class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="source">BBC World</span>
+                        <span class="score danger">РИСК: 9/10</span>
+                    </div>
+                    <div class="title">Inside Yemen's front-line city as Houthis battle for control</div>
+                    <div class="analysis">Высокий уровень риска для военного и мирного населения в регионе.</div>
+                </div>
+            </div>
+    
+        </div>
+
+        <footer>
+            <p>Этот портал работает в статическом режиме. Мы не используем cookies, аналитику и не сохраняем IP-адреса пользователей.</p>
+        </footer>
+    </div>
+</body>
+</html>
